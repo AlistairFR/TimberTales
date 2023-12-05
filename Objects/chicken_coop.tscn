@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://cv4wv6e3im33"]
+
+[ext_resource type="Texture2D" uid="uid://bj3ung7ij57p7" path="res://Art/Sprout Lands - Sprites - Basic pack/Objects/Free_Chicken_House.png" id="1_hxi04"]
+[ext_resource type="Script" path="res://Objects/chicken_coop.gd" id="2_akgf0"]
+[ext_resource type="PackedScene" uid="uid://bahdudmbf7ayg" path="res://Objects/Interact Area/interact_area.tscn" id="3_eha6g"]
+
+[node name="Chicken_Coop" type="Sprite2D"]
+texture = ExtResource("1_hxi04")
+script = ExtResource("2_akgf0")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(-17, -6, -17, 20, -4, 20, -4, 24, 4, 24, 4, 20, 17, 20, 17, -6)
+
+[node name="InteractArea" parent="." instance=ExtResource("3_eha6g")]
+position = Vector2(0, 13)
+scale = Vector2(0.64693, 0.730131)
+interact_label = "Chicken Despawn"
+interact_type = "chicken_despawn"
+interact_value = ""

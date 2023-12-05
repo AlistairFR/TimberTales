@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://benxhvtio2og7"]
+
+[ext_resource type="Script" path="res://Item/item_data.gd" id="1_vu5us"]
+[ext_resource type="Texture2D" uid="uid://c0ttsngxgj5w6" path="res://Item/item_atlas.tres" id="2_4rjh4"]
+
+[resource]
+script = ExtResource("1_vu5us")
+name = "Hardwood"
+description = "When trees flex their muscles and become the bodybuilders of the forest. Splinters are their way of saying, 'Don't mess with the tough wood!"
+stackable = true
+texture = ExtResource("2_4rjh4")

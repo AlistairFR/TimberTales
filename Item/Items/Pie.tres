@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemDataConsumable" load_steps=4 format=3 uid="uid://ckghyms3wtsag"]
+
+[ext_resource type="Script" path="res://Item/item_data_consumable.gd" id="1_irmta"]
+[ext_resource type="Texture2D" uid="uid://c8v0a03nq36ry" path="res://Item/32pxAtlas.png" id="2_jaby5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gksbg"]
+atlas = ExtResource("2_jaby5")
+region = Rect2(64, 0, 32, 32)
+
+[resource]
+script = ExtResource("1_irmta")
+recovery_value = 30
+name = "Pie"
+description = "The original circle of trust, where flaky meets filling in a tasty conspiracy against hunger."
+stackable = true
+texture = SubResource("AtlasTexture_gksbg")

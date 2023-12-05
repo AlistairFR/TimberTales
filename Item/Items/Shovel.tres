@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://dytkqtrbnkjrt"]
+
+[ext_resource type="Script" path="res://Item/item_data.gd" id="1_8lu3y"]
+[ext_resource type="Texture2D" uid="uid://c8v0a03nq36ry" path="res://Item/32pxAtlas.png" id="2_5dgar"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rj2am"]
+atlas = ExtResource("2_5dgar")
+region = Rect2(0, 0, 32, 32)
+
+[resource]
+script = ExtResource("1_8lu3y")
+name = "Shovel"
+description = "Earth's scoop, a dirt magician's wand, helping you dig into the backyard drama with every elegant thrust."
+stackable = false
+texture = SubResource("AtlasTexture_rj2am")

@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="InventoryData" load_steps=12 format=3 uid="uid://b883enjo1psci"]
+
+[ext_resource type="Script" path="res://Inventory/inventory_data.gd" id="1_ur2bi"]
+[ext_resource type="Resource" uid="uid://87s6sogr3m6v" path="res://Item/Items/Corn.tres" id="2_68ujd"]
+[ext_resource type="Resource" uid="uid://benxhvtio2og7" path="res://Item/Items/Wood.tres" id="2_68w3g"]
+[ext_resource type="Script" path="res://Inventory/slot_data.gd" id="3_fox67"]
+[ext_resource type="Resource" uid="uid://dytkqtrbnkjrt" path="res://Item/Items/Shovel.tres" id="4_mgueg"]
+[ext_resource type="Resource" uid="uid://ckghyms3wtsag" path="res://Item/Items/Pie.tres" id="5_wge7x"]
+
+[sub_resource type="Resource" id="Resource_3juy8"]
+script = ExtResource("3_fox67")
+item_data = ExtResource("2_68w3g")
+quantity = 45
+
+[sub_resource type="Resource" id="Resource_nyta5"]
+script = ExtResource("3_fox67")
+item_data = ExtResource("2_68ujd")
+quantity = 10
+
+[sub_resource type="Resource" id="Resource_h6gik"]
+script = ExtResource("3_fox67")
+item_data = ExtResource("2_68ujd")
+quantity = 30
+
+[sub_resource type="Resource" id="Resource_8wktp"]
+script = ExtResource("3_fox67")
+item_data = ExtResource("4_mgueg")
+quantity = 1
+
+[sub_resource type="Resource" id="Resource_nlgwt"]
+script = ExtResource("3_fox67")
+item_data = ExtResource("5_wge7x")
+quantity = 3
+
+[resource]
+script = ExtResource("1_ur2bi")
+slot_datas = Array[ExtResource("3_fox67")]([SubResource("Resource_3juy8"), null, SubResource("Resource_nyta5"), SubResource("Resource_h6gik"), SubResource("Resource_8wktp"), null, SubResource("Resource_nlgwt"), null, null, null, null, null, null, null, null, null, null, null])

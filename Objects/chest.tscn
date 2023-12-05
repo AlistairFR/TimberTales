@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://but1uvulbr812"]
+
+[ext_resource type="Texture2D" uid="uid://bv5laybfojcht" path="res://Art/Sprout Lands - Sprites - Basic pack/Objects/Chest.png" id="1_ks2v8"]
+[ext_resource type="Script" path="res://Objects/chest.gd" id="2_hr221"]
+[ext_resource type="PackedScene" uid="uid://bahdudmbf7ayg" path="res://Objects/Interact Area/interact_area.tscn" id="2_wjf0r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_abhto"]
+size = Vector2(16, 7)
+
+[node name="Chest" type="Sprite2D" groups=["external_inventory"]]
+texture = ExtResource("1_ks2v8")
+hframes = 5
+vframes = 2
+script = ExtResource("2_hr221")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 4.5)
+shape = SubResource("RectangleShape2D_abhto")
+
+[node name="InteractArea" parent="." instance=ExtResource("2_wjf0r")]
+interact_label = "Chest_0001"
+interact_type = "open_external_inventory"
+interact_value = "Open"

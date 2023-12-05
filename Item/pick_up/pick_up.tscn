@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://bk688g5cobitl"]
+
+[ext_resource type="Texture2D" uid="uid://c0ttsngxgj5w6" path="res://Item/item_atlas.tres" id="1_r67jm"]
+[ext_resource type="Script" path="res://Item/pick_up/pick_up.gd" id="2_7lsh0"]
+[ext_resource type="PackedScene" uid="uid://bahdudmbf7ayg" path="res://Objects/Interact Area/interact_area.tscn" id="2_ib0lv"]
+
+[node name="Sprite2D" type="Sprite2D"]
+position = Vector2(-1, 0)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("1_r67jm")
+script = ExtResource("2_7lsh0")
+
+[node name="InteractArea" parent="." instance=ExtResource("2_ib0lv")]
+scale = Vector2(1.75, 1.75)
+interact_label = "Pick_up"
+interact_type = "pick_up"
+interact_value = "Pick up"

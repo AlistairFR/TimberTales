@@ -1,0 +1,46 @@
+[gd_scene load_steps=9 format=3 uid="uid://dlxhn3vq2db7e"]
+
+[ext_resource type="Texture2D" uid="uid://dx8wr14u4076d" path="res://Art/Homemade/pine_big.png" id="1_o1th0"]
+[ext_resource type="Resource" uid="uid://benxhvtio2og7" path="res://Item/Items/Wood.tres" id="2_6heif"]
+[ext_resource type="Script" path="res://Objects/tree_big.gd" id="2_vkkqq"]
+[ext_resource type="PackedScene" uid="uid://bahdudmbf7ayg" path="res://Objects/Interact Area/interact_area.tscn" id="2_wa8tq"]
+[ext_resource type="Script" path="res://Inventory/slot_data.gd" id="3_k0b6d"]
+[ext_resource type="Texture2D" uid="uid://lbq8qdtig8t3" path="res://Art/Homemade/pine_big_cut.png" id="4_q67jv"]
+
+[sub_resource type="Resource" id="Resource_b3rpw"]
+script = ExtResource("3_k0b6d")
+item_data = ExtResource("2_6heif")
+quantity = 3
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_58rh1"]
+radius = 5.0
+height = 16.0
+
+[node name="Tree_big" type="Node2D"]
+y_sort_enabled = true
+position = Vector2(0, -20)
+script = ExtResource("2_vkkqq")
+drop_item_data = SubResource("Resource_b3rpw")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(0, 9)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 12)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_58rh1")
+
+[node name="InteractArea" parent="." instance=ExtResource("2_wa8tq")]
+position = Vector2(0, 21)
+scale = Vector2(0.97, 0.715)
+interact_label = "Tree"
+interact_type = "tree_cut"
+interact_value = "Cut Down"
+
+[node name="Tree_big_sprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_o1th0")
+
+[node name="Tree_big_cut_sprite" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(16, 8)
+texture = ExtResource("4_q67jv")
